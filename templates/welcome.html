@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%  block content %}
+    <h2>How to play</h2>
+    <p>
+        ** Rock crushes scissors or sometimes blunts scissors **
+    </p>
+       
+         <p>** Paper covers rock **</p>
+       <p>** Scissors cuts paper **</p> 
+    
+    <!-- <p><a href="/game">Play Game</a></p> -->
+    <form action="/game">
+        <input type="submit" value="Play Game" />
+    </form>
+    
+{% endblock %}
