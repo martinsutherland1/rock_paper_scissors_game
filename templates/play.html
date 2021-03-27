@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%  block content %}
+
+<h2>Take on the Computer</h2>
+
+<form action="/play" method="POST">
+    <label for="player_name">Player Name</label>
+    <input type="text" name="player_name" id="player_name">
+    <label for="player_choice">Player Choice</label>
+    <input type="text" name="player_choice" id="player_choice">
+    <input type="submit" value="Play">
+
+</form>
+
+<section>
+    <p><b>{{ result }}</b></p>
+</section>
+
+    
+
+    {% endblock %}
