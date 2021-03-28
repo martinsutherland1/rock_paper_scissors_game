@@ -3,12 +3,43 @@
 {%  block content %}
 
 <h2>Let's play!</h2>
-    <section>
+    <!-- <section>
         <p>Player 1 choose <b>{{choice_1}}</b></p>
         <p>Player 2 choose <b>{{choice_2}}</b></p>
         <h2>And the winner is:</h2>
         <p><b>{{ result }}</b></p>
-    </section>
-    
+    </section> -->
+    <form action="/game" method="POST">
+        <label for="player1_name">Player 1 Name</label>
+        <input type="text" onfocus="this.value=''" name="player1_name" id="player1_name">
+        <label for="player_choice">Player 1 Choice</label>
+        <!-- <input type="text" name="player1_choice" id="player1_choice"> -->
+        <input list="player1_choice" type="text" onfocus="this.value=''" name="player1_choice">
+        <datalist id="player1_choice">
+                <option value="rock">
+                <option value="paper">
+                <option value="scissors">
+        </datalist>
+
+        
+        
+        <label for="player2_name">Player 2 Name </label>
+        <input type="text" onfocus="this.value=''" name="player2_name" id="player2_name">
+        <label for="player2_choice">Player 2 Choice</label>
+        <!-- <input type="text" name="player2_choice" id="player2_choice"> -->
+        <input list="player2_choice" type="text" onfocus="this.value=''" name="player2_choice">
+        <datalist id="player2_choice">
+            <option value="rock">
+            <option value="paper">
+            <option value="scissors">   
+         </datalist>
+        <input id="play" type="submit" value="Play">
+     </form>
+         <section>
+        <h2>And the winner is:</h2>
+        <p><b>{{ result }}</b></p>
+    </section> 
+
+     
 
     {% endblock %}
